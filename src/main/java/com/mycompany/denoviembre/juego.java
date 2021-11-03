@@ -45,8 +45,8 @@ public class juego {
             } else {
                 System.out.println("No gana ninguno");
             }
-        } while (!(rondas1 == 5 || rondas2 == 5));
-        if (rondas1 == 5){
+        } while (!(rondas1 > 3 || rondas2 > 3));
+        if (rondas1 > 3 ){
             System.out.println("HAS GANADO JUGADOR 1!");
         } else {
             System.out.println("HAS GANADO JUGADOR 2");
