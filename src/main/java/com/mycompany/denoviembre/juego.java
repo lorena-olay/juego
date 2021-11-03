@@ -35,21 +35,22 @@ public class juego {
             System.out.println(jugador2);
             //calculo
             suma = jugador1 + jugador2;
-            //condiciones de victoria
+            //condiciones de victoria y rondas
             if (suma < 7) {
                 System.out.println("Jugador 1 ganas");
-            } else if (suma > 7) {
-                System.out.println("Jugador 2 ganas");
-            } else if (suma == 7) {
-                System.out.println("No gana ninguno");
-            }
-            //condiciones de rondas
-            if (suma < 7) {
                 rondas1++;
             } else if (suma > 7) {
+                System.out.println("Jugador 2 ganas");
                 rondas2++;
+            } else {
+                System.out.println("No gana ninguno");
             }
-        } while (!(rondas1 == 3 || rondas2 == 3));
+        } while (!(rondas1 == 5 || rondas2 == 5));
+        if (rondas1 == 5){
+            System.out.println("HAS GANADO JUGADOR 1!");
+        } else {
+            System.out.println("HAS GANADO JUGADOR 2");
+        }
 
     }
 
