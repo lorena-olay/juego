@@ -23,25 +23,27 @@ public class juego {
         Scanner entradateclado = new Scanner(System.in);
         Random numAleatorio = new Random();
         // TODO code application logic here
-        do{
-        System.out.println("número aleatorio del jugador 1");
-        jugador1 = numAleatorio.nextInt(6);
-        System.out.println("número aleatorio del jugador 2");
-        jugador2 = numAleatorio.nextInt(6);
-        suma = jugador1 + jugador2;
-        if (suma < 7) {
-            System.out.println("Jugador 1 ganas");
-        } else if (suma > 7) {
-            System.out.println("Jugador 2 ganas");
-        } else if (suma == 7) {
-            System.out.println("No gana ninguno");
-        }
-        if (suma < 7) {
-            rondas1++;
-        } else if (suma > 7){
-            rondas2++;
-        }
-        }while(!(rondas1 == 3 || rondas2 == 3));
+        do {
+            System.out.println("número aleatorio del jugador 1");
+            jugador1 = numAleatorio.nextInt(6);
+            System.out.println(jugador1);
+            System.out.println("número aleatorio del jugador 2");
+            jugador2 = numAleatorio.nextInt(6);
+            System.out.println(jugador2);
+            suma = jugador1 + jugador2;
+            if (suma < 7) {
+                System.out.println("Jugador 1 ganas");
+            } else if (suma > 7) {
+                System.out.println("Jugador 2 ganas");
+            } else if (suma == 7) {
+                System.out.println("No gana ninguno");
+            }
+            if (suma < 7) {
+                rondas1++;
+            } else if (suma > 7) {
+                rondas2++;
+            }
+        } while (!(rondas1 == 3 || rondas2 == 3));
 
     }
 
