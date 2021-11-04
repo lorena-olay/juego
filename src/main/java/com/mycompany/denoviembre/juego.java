@@ -21,6 +21,7 @@ public class juego {
         int jugador1, jugador2, rondas, suma, rondas1, rondas2;
         rondas1 = 0;
         rondas2 = 0;
+        final int VICTORIA = 5;
         Scanner entradateclado = new Scanner(System.in);
         Random numAleatorio = new Random();
         // TODO code application logic here
@@ -28,10 +29,10 @@ public class juego {
         do {
             //creamos los datos del juego
             System.out.println("número aleatorio del jugador 1");
-            jugador1 = numAleatorio.nextInt(6);
+            jugador1 = numAleatorio.nextInt(5) + 1;//entre 1 y 5
             System.out.println(jugador1);
             System.out.println("número aleatorio del jugador 2");
-            jugador2 = numAleatorio.nextInt(6);
+            jugador2 = numAleatorio.nextInt(5) + 1;//entre 1 y 5
             System.out.println(jugador2);
             //calculo
             suma = jugador1 + jugador2;
@@ -45,8 +46,8 @@ public class juego {
             } else {
                 System.out.println("No gana ninguno");
             }
-        } while (!(rondas1 > 3 || rondas2 > 3));
-        if (rondas1 > 3 ){
+        } while (!(rondas1 == VICTORIA || rondas2 == VICTORIA));
+        if (rondas1 == VICTORIA) {
             System.out.println("HAS GANADO JUGADOR 1!");
         } else {
             System.out.println("HAS GANADO JUGADOR 2");
